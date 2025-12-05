@@ -4,8 +4,7 @@ description: My Portfolio
 url: "https://puneethrao.github.io"
 
 # Theme
-theme: jekyll-theme-merlot
-
+theme: jekyll-theme-leap-day
 # Build settings
 markdown: kramdown
 
