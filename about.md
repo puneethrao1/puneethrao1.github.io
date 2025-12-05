@@ -30,7 +30,7 @@ I enjoy working with data to identify patterns, build dashboards, and communicat
 - SQL  
 - Python  
 - Google Sheets  
-- Tableau (beginner level)  
+- Tableau 
 
 ---
 
@@ -55,5 +55,4 @@ I enjoy working with data to identify patterns, build dashboards, and communicat
 Feel free to connect with me:  
 📧 **Email:** [puneethd79@gmail.com](mailto:puneethd79@gmail.com)  
 🔗 **LinkedIn:** [linkedin.com/in/puneeth-rao-4792131ba](https://www.linkedin.com/in/puneeth-rao-4792131ba/)  
-💻 **GitHub:** [github.com/puneethrao](https://github.com/puneethrao)
 
