@@ -21,3 +21,14 @@ defaults:
       type: "projects"
     values:
       layout: default
+@import "{{ site.theme }}";
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.forkongithub,
+.page-header a[href*="github.io"],
+.page-footer {
+  display: none !important;
+}
