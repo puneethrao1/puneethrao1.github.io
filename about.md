@@ -1,6 +1,4 @@
 
-## Introduction
-
 Hello! I’m **Puneeth Rao**, a **final-year student** studying **Business with Information Systems** at **Dublin Business School (DBS)**.  
 I’m passionate about exploring how data can be used to uncover insights, support smarter business decisions, and improve organizational performance.
 
@@ -38,7 +36,7 @@ I enjoy working with data to identify patterns, build dashboards, and communicat
 
 **Dublin Business School (DBS)**  
 *Bachelor of Arts (Honours) in Business with Information Systems*  
-**Expected Graduation:** 2026  
+**Expected Graduation:** May 2026  
 
 ---
 
