@@ -1,0 +1,69 @@
+Create a modern, responsive personal portfolio website for a business analytics and data visualization student.
+
+Layout and sections:
+
+Single‑page site with four sections:
+
+Hero (name, title, short tagline)
+
+About Me
+
+Featured Projects
+
+Contact / Links.
+
+Fixed top navigation bar with links that use smooth scrolling to each section when clicked.
+
+Add a small scroll‑to‑top button that appears in the bottom‑right after the user scrolls down, with smooth scroll back to the top when clicked.
+
+Use simple scroll animations: sections fade in and slide up slightly as they enter the viewport.
+
+Visual style:
+
+Clean, professional theme with good spacing and large, readable typography.
+
+Use a Google font like “Poppins” or “Inter” for headings and body text.
+
+Light or dark theme is fine, but keep strong contrast and minimal colors.
+
+Hero section:
+
+Centered content with name “Puneeth Rao Dilip” and subtitle “Business Analytics & Data Visualization Student”.
+
+Under the subtitle, show 3 pill‑style chips for skills such as “Data storytelling”, “Dashboards & BI”, “Business decision support”.
+
+Add a “View Projects” button that smooth‑scrolls to the Featured Projects section.
+
+About Me section:
+
+Take the following text and rewrite it into 2–3 short paragraphs plus a bullet list of 4–6 key skills or tools.
+
+Focus on analytics, dashboards, data storytelling, business intelligence, and using data for better decisions.
+
+Text to use and compress (do not copy verbatim, keep it shorter and in your own words):
+“PASTE ABOUT TEXT HERE from https://puneethrao1.github.io/about”
+
+Featured Projects section:
+
+3‑card responsive grid (stacks to one column on mobile).
+
+Each card shows: project title, 1–2 sentence description, and tags like “Power BI”, “Tableau”, “Excel”, “SQL”, “Python”, “Business case study”.
+
+Use placeholder links (href="#") for now.
+
+Contact / Links section:
+
+Short invitation to connect for internships or projects.
+
+Buttons or links for Email, GitHub, and LinkedIn with placeholder URLs.
+
+Interactivity and code details:
+
+Implement smooth scroll using JavaScript or CSS scroll-behavior: smooth.
+
+Implement simple scroll‑in animations (e.g., using Intersection Observer or a small JS snippet; no large libraries).
+
+Generate clean HTML, CSS, and minimal JavaScript, all in one file, with comments so I can edit later.
+
+Make sure the site is responsive and works well on mobile and desktop.
+
