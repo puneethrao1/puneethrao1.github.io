@@ -5,16 +5,10 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 
 const projects = [
   {
-    title: "Python E-commerce Analysis",
-    description: "Data analysis using Python, Pandas, and visualization libraries. Includes exploratory analysis, statistical insights, and sales trend forecasting.",
-    tags: ["Python", "Pandas", "Data Science", "Jupyter Notebook"],
-    links: { demo: "https://puneethrao1.github.io/ecommerce_sales_analysis.html" }
-  },
-  {
-    title: "Telecom Customer Churn Analysis",
-    description: "Excel analysis of 7,043 telecom customers with 27% churn rate. Features KPI dashboards, pivot tables, and customer segmentation identifying key churn drivers and €137K revenue at risk.",
-    tags: ["Excel", "Customer Analytics", "Churn Analysis", "Business Intelligence"],
-    links: { demo: "https://docs.google.com/spreadsheets/d/1LTfEnnINEJJlQpLBF6lzTZRSMlx9Han_/edit?gid=19451180#gid=19451180" }
+    title: "Dublin Bikes Usage Analysis Dashboard",
+    description: "Interactive Power BI dashboard analyzing a month of Dublin Bikes data, revealing usage patterns, peak hours, station popularity, and user demographics to optimize bike-sharing operations.",
+    tags: ["Power BI", "Data Visualization", "Public Transport", "Analytics"],
+    links: { demo: "https://app.powerbi.com/view?r=eyJrIjoiYTk3NTFlYjEtYWZhMC00MGE4LThkZWYtMmQ3OWJiOWJlMmI2IiwidCI6IjVkMGFhNmVhLTY2MjAtNDg2My05ZTIxLTllY2IxNDAyMjJiYyIsImMiOjh9" }
   },
   {
     title: "Dublin Fire & Ambulance Response Dashboard",
@@ -23,16 +17,22 @@ const projects = [
     links: { demo: "https://public.tableau.com/app/profile/puneeth.rao/viz/Dublinincidents/Dashboard1" }
   },
   {
-    title: "Dublin Bikes Usage Analysis Dashboard",
-    description: "Interactive Power BI dashboard analyzing a month of Dublin Bikes data, revealing usage patterns, peak hours, station popularity, and user demographics to optimize bike-sharing operations.",
-    tags: ["Power BI", "Data Visualization", "Public Transport", "Analytics"],
-    links: { demo: "https://app.powerbi.com/view?r=eyJrIjoiYTk3NTFlYjEtYWZhMC00MGE4LThkZWYtMmQ3OWJiOWJlMmI2IiwidCI6IjVkMGFhNmVhLTY2MjAtNDg2My05ZTIxLTllY2IxNDAyMjJiYyIsImMiOjh9" }
-  },
-  {
     title: "Customer Relationship Management System",
     description: "Fully functional CRM built on Salesforce platform featuring lead tracking, opportunity management, automated workflows, and custom reporting for streamlined sales operations.",
     tags: ["Salesforce", "CRM", "Sales Automation", "Workflow Design"],
     links: { demo: "/salesforce-demo" }
+  },
+  {
+    title: "Python E-commerce Analysis",
+    description: "Analyzed 500K+ e-commerce transactions using Python, Pandas, and Matplotlib to identify revenue trends, customer purchasing patterns, product performance metrics, and seasonal sales variations for data-driven business insights.",
+    tags: ["Python", "Pandas", "Data Science", "Jupyter Notebook"],
+    links: { demo: "https://puneethrao1.github.io/ecommerce_sales_analysis.html" }
+  },
+  {
+    title: "Telecom Customer Churn Analysis",
+    description: "Excel analysis of 7,043 telecom customers with 27% churn rate. Features KPI dashboards, pivot tables, and customer segmentation identifying key churn drivers and €137K revenue at risk.",
+    tags: ["Excel", "Customer Analytics", "Churn Analysis", "Business Intelligence"],
+    links: { demo: "https://docs.google.com/spreadsheets/d/1LTfEnnINEJJlQpLBF6lzTZRSMlx9Han_/edit?gid=19451180#gid=19451180" }
   }
 ];
 
