@@ -1,41 +1,38 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 
 const projects = [
   {
+    title: "Python E-commerce Analysis",
+    description: "Data analysis using Python, Pandas, and visualization libraries. Includes exploratory analysis, statistical insights, and sales trend forecasting.",
+    tags: ["Python", "Pandas", "Data Science", "Jupyter Notebook"],
+    links: { demo: "https://puneethrao1.github.io/ecommerce_sales_analysis.html" }
+  },
+  {
+    title: "Telecom Customer Churn Analysis",
+    description: "Excel analysis of 7,043 telecom customers with 27% churn rate. Features KPI dashboards, pivot tables, and customer segmentation identifying key churn drivers and €137K revenue at risk.",
+    tags: ["Excel", "Customer Analytics", "Churn Analysis", "Business Intelligence"],
+    links: { demo: "https://docs.google.com/spreadsheets/d/1LTfEnnINEJJlQpLBF6lzTZRSMlx9Han_/edit?gid=19451180#gid=19451180" }
+  },
+  {
     title: "Dublin Fire & Ambulance Response Dashboard",
     description: "Interactive Tableau dashboard analyzing Dublin's emergency response data including 91,867 incidents, average response time of 39 minutes, call density by station, incident types breakdown, and SLA performance metrics across fire and ambulance services.",
     tags: ["Tableau", "Data Visualization", "Public Safety", "Analytics"],
-    links: { demo: "https://public.tableau.com/app/profile/puneeth.rao/viz/Dublinincidents/Dashboard1", code: "#" }
-  },
-  {
-    title: "Online Retail Sales Analysis",
-    description: "Analyzed 500K+ transactions to identify revenue drivers, customer segmentation patterns, and seasonal trends using Python for data cleaning and exploratory analysis.",
-    tags: ["Python", "Pandas", "Matplotlib", "Jupyter Notebook"],
-    links: { 
-      demo: "/ecommerce_sales_analysis.html", 
-      code: "https://github.com/puneethrao1/retail-analysis" 
-    }
+    links: { demo: "https://public.tableau.com/app/profile/puneeth.rao/viz/Dublinincidents/Dashboard1" }
   },
   {
     title: "Dublin Bikes Usage Analysis Dashboard",
     description: "Interactive Power BI dashboard analyzing a month of Dublin Bikes data, revealing usage patterns, peak hours, station popularity, and user demographics to optimize bike-sharing operations.",
     tags: ["Power BI", "Data Visualization", "Public Transport", "Analytics"],
-    links: { demo: "", code: "" }
+    links: { demo: "https://app.powerbi.com/view?r=eyJrIjoiYTk3NTFlYjEtYWZhMC00MGE4LThkZWYtMmQ3OWJiOWJlMmI2IiwidCI6IjVkMGFhNmVhLTY2MjAtNDg2My05ZTIxLTllY2IxNDAyMjJiYyIsImMiOjh9" }
   },
   {
     title: "Customer Relationship Management System",
     description: "Fully functional CRM built on Salesforce platform featuring lead tracking, opportunity management, automated workflows, and custom reporting for streamlined sales operations.",
     tags: ["Salesforce", "CRM", "Sales Automation", "Workflow Design"],
-    links: { demo: "", code: "" }
-  },
-  {
-    title: "Corporate Budget Management Dashboard",
-    description: "Comprehensive Excel financial dashboard with automated variance analysis, expense tracking, and forecasting models using formulas and conditional formatting to monitor departmental budgets and identify cost-saving opportunities.",
-    tags: ["Excel", "Financial Analysis", "Budgeting", "Forecasting"],
-    links: { demo: "", code: "" }
+    links: { demo: "/salesforce-demo" }
   }
 ];
 
@@ -82,19 +79,17 @@ export function Projects() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="mt-auto pt-6 border-t border-border gap-4">
-                  <a 
-                    href={project.links.demo} 
-                    className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" /> View Project
-                  </a>
-                  <a 
-                    href={project.links.code} 
-                    className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <Github className="w-4 h-4 mr-2" /> Source Code
-                  </a>
+                <CardFooter className="mt-auto pt-6 border-t border-border">
+                  {project.links.demo && (
+                    <a 
+                      href={project.links.demo}
+                      target={project.links.demo.startsWith('http') ? "_blank" : "_self"}
+                      rel={project.links.demo.startsWith('http') ? "noopener noreferrer" : ""}
+                      className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" /> View Project
+                    </a>
+                  )}
                 </CardFooter>
               </Card>
             </motion.div>
@@ -128,19 +123,17 @@ export function Projects() {
                     ))}
                   </div>
                 </CardContent>
-                <CardFooter className="mt-auto pt-6 border-t border-border gap-4">
-                  <a 
-                    href={project.links.demo} 
-                    className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" /> View Project
-                  </a>
-                  <a 
-                    href={project.links.code} 
-                    className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <Github className="w-4 h-4 mr-2" /> Source Code
-                  </a>
+                <CardFooter className="mt-auto pt-6 border-t border-border">
+                  {project.links.demo && (
+                    <a 
+                      href={project.links.demo}
+                      target={project.links.demo.startsWith('http') ? "_blank" : "_self"}
+                      rel={project.links.demo.startsWith('http') ? "noopener noreferrer" : ""}
+                      className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" /> View Project
+                    </a>
+                  )}
                 </CardFooter>
               </Card>
             </motion.div>
