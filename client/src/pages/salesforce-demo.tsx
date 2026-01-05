@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle, BarChart3, Database, Zap, Shield, Users, FileText } from "lucide-react";
+import { ArrowLeft, CheckCircle, BarChart3, Database, Zap, Shield, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
@@ -19,142 +19,165 @@ export default function SalesforceDemo() {
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="py-20 bg-muted/30">
+      {/* Hero - Compact */}
+      <section className="py-12 bg-muted/30">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <div className="mb-8">
+            <div className="mb-6">
               <img
                 src="/salesforce-screenshots/logo.png"
                 alt="Puneeth Corp logo"
-                className="h-12 mb-6"
+                className="h-10 mb-4"
               />
-              <h1 className="text-5xl md:text-6xl font-display font-bold text-foreground mb-4">
+              <h1 className="text-4xl font-bold text-foreground mb-3">
                 Puneeth Corp Sales CRM
               </h1>
             </div>
-            <p className="text-lg text-muted-foreground mb-8 max-w-4xl leading-relaxed">
-              A complete Salesforce Sales Cloud implementation demonstrating enterprise-level CRM administration, 
-              process automation, and business intelligence. Built in a Developer Edition org to manage the entire 
-              sales lifecycle from lead generation through closed deals.
+            <p className="text-base text-muted-foreground mb-6 max-w-3xl leading-relaxed">
+              Enterprise Salesforce Sales Cloud implementation demonstrating CRM administration, process automation, and business intelligence.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-2">
               <Badge>Salesforce Sales Cloud</Badge>
               <Badge>CRM Administration</Badge>
               <Badge>Process Automation</Badge>
               <Badge>Reporting & Dashboards</Badge>
-              <Badge>Business Process Design</Badge>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Core Modules */}
-      <section className="py-20">
+      <section className="py-16">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-display font-bold text-foreground mb-12">Core Modules</h2>
+            <h2 className="text-3xl font-bold text-foreground mb-12">Core Modules</h2>
             
-            <div className="grid md:grid-cols-1 gap-16">
+            <div className="space-y-16">
               {/* Dashboard */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">Sales Performance Dashboard</h3>
-                  <p className="text-muted-foreground text-base">
-                    Lightning dashboard providing real-time visibility into pipeline health, win/loss metrics, lead status distribution, and open pipeline value. Includes 5+ visualizations tracking key sales metrics.
+                  <p className="text-muted-foreground">
+                    Real-time pipeline visibility with win/loss metrics, lead status, and open pipeline value.
                   </p>
                 </div>
                 <img 
                   src="/salesforce-screenshots/dashboard-new.png" 
                   alt="Sales Dashboard" 
-                  className="w-full rounded-lg border border-border shadow-lg hover:shadow-xl transition-shadow"
-                  style={{ minHeight: "600px", objectFit: "cover" }}
+                  className="w-full rounded-lg border border-border shadow-lg"
                 />
               </div>
 
-              {/* Accounts & Contacts */}
-              <div className="space-y-6">
+              {/* Accounts */}
+              <div className="space-y-4">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-2">Accounts & Contacts Management</h3>
-                  <p className="text-muted-foreground text-base">
-                    360° customer view with linked accounts, contacts, opportunities, cases, and activities. Mobile-responsive layouts enable sales teams to manage customer relationships on the go.
+                  <h3 className="text-2xl font-semibold mb-2">Accounts Management</h3>
+                  <p className="text-muted-foreground">
+                    Complete account hierarchy with related contacts, opportunities, cases, and activity timeline.
                   </p>
                 </div>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <img 
-                    src="/salesforce-screenshots/Accounts.png" 
-                    alt="Accounts" 
-                    className="w-full rounded-lg border border-border shadow-lg hover:shadow-xl transition-shadow"
-                    style={{ minHeight: "500px", objectFit: "cover" }}
-                  />
-                  <img 
-                    src="/salesforce-screenshots/Contacts.png" 
-                    alt="Contacts" 
-                    className="w-full rounded-lg border border-border shadow-lg hover:shadow-xl transition-shadow"
-                    style={{ minHeight: "500px", objectFit: "cover" }}
-                  />
-                  <img 
-                    src="/salesforce-screenshots/accounts eg.png" 
-                    alt="Account Details" 
-                    className="w-full rounded-lg border border-border shadow-lg hover:shadow-xl transition-shadow"
-                    style={{ minHeight: "500px", objectFit: "cover" }}
-                  />
+                <img 
+                  src="/salesforce-screenshots/Accounts.png" 
+                  alt="Accounts" 
+                  className="w-full rounded-lg border border-border shadow-lg"
+                />
+              </div>
+
+              {/* Contacts */}
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Contacts & Communication</h3>
+                  <p className="text-muted-foreground">
+                    Contact management with email, phone, and interaction history integrated with opportunities.
+                  </p>
                 </div>
+                <img 
+                  src="/salesforce-screenshots/Contacts.png" 
+                  alt="Contacts" 
+                  className="w-full rounded-lg border border-border shadow-lg"
+                />
+              </div>
+
+              {/* Account Details */}
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Account Details & Analytics</h3>
+                  <p className="text-muted-foreground">
+                    Deep-dive view with account health, opportunity pipeline, and customer metrics.
+                  </p>
+                </div>
+                <img 
+                  src="/salesforce-screenshots/accounts eg.png" 
+                  alt="Account Details" 
+                  className="w-full rounded-lg border border-border shadow-lg"
+                />
               </div>
 
               {/* Leads */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div>
                   <h3 className="text-2xl font-semibold mb-2">Lead Management</h3>
-                  <p className="text-muted-foreground text-base">
-                    Prospect tracking system with defined stages: New → Contacted → Nurturing → Qualified → Unqualified. Custom fields capture budget, decision maker, and lead source for intelligent lead scoring.
+                  <p className="text-muted-foreground">
+                    Prospect tracking: New → Contacted → Nurturing → Qualified → Unqualified
                   </p>
                 </div>
                 <img 
                   src="/salesforce-screenshots/Leads.png" 
                   alt="Leads" 
-                  className="w-full rounded-lg border border-border shadow-lg hover:shadow-xl transition-shadow"
-                  style={{ minHeight: "550px", objectFit: "cover" }}
+                  className="w-full rounded-lg border border-border shadow-lg"
                 />
               </div>
 
               {/* Products */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-2">Product Catalog & Services</h3>
-                  <p className="text-muted-foreground text-base">
-                    Configurable product records for CRM Training, Cloud Migration, Security Upgrades, and custom service bundles. Enables sales teams to build accurate opportunity forecasts and deal sizing.
+                  <h3 className="text-2xl font-semibold mb-2">Product Catalog</h3>
+                  <p className="text-muted-foreground">
+                    Service offerings: CRM Training, Cloud Migration, Security Upgrades, custom bundles.
                   </p>
                 </div>
                 <img 
                   src="/salesforce-screenshots/Products.png" 
                   alt="Products" 
-                  className="w-full rounded-lg border border-border shadow-lg hover:shadow-xl transition-shadow"
-                  style={{ minHeight: "550px", objectFit: "cover" }}
+                  className="w-full rounded-lg border border-border shadow-lg"
                 />
               </div>
 
               {/* Automation */}
-              <div className="space-y-6">
+              <div className="space-y-4">
                 <div>
-                  <h3 className="text-2xl font-semibold mb-2">Process Automation with Flows</h3>
-                  <p className="text-muted-foreground text-base">
-                    20+ configured flows handling record-triggered automation, email alerts, task creation, and stage-based notifications. Reduces manual admin work and ensures consistent process execution across the sales org.
+                  <h3 className="text-2xl font-semibold mb-2">Process Automation</h3>
+                  <p className="text-muted-foreground">
+                    20+ flows: record-triggered automation, email alerts, task creation, stage notifications.
                   </p>
                 </div>
                 <img 
                   src="/salesforce-screenshots/Flows.png" 
                   alt="Flows" 
-                  className="w-full rounded-lg border border-border shadow-lg hover:shadow-xl transition-shadow"
-                  style={{ minHeight: "550px", objectFit: "cover" }}
+                  className="w-full rounded-lg border border-border shadow-lg"
+                />
+              </div>
+
+              {/* Home Page */}
+              <div className="space-y-4">
+                <div>
+                  <h3 className="text-2xl font-semibold mb-2">Home & Navigation</h3>
+                  <p className="text-muted-foreground">
+                    Personalized home page with quick links, recent items, and key metrics overview.
+                  </p>
+                </div>
+                <img 
+                  src="/salesforce-screenshots/home-page.png" 
+                  alt="Home Page" 
+                  className="w-full rounded-lg border border-border shadow-lg"
                 />
               </div>
             </div>
@@ -162,133 +185,59 @@ export default function SalesforceDemo() {
         </div>
       </section>
 
-      {/* Skills */}
-      <section className="py-20 bg-muted/30">
+      {/* Features Section */}
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-display font-bold text-foreground mb-12">Skills Demonstrated</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-card border-border">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Users className="w-5 h-5 text-primary" />
-                    Salesforce Administration
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Custom fields, record types, page layouts, and validation rules</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Object relationships and data model design for B2B sales</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Mobile app configuration and responsive UI design</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Permission sets and sharing rules for role-based access</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+          <h2 className="text-3xl font-bold text-foreground mb-12">Key Capabilities</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card>
+              <CardHeader>
+                <BarChart3 className="w-6 h-6 mb-2 text-primary" />
+                <CardTitle>Real-time Analytics</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Dynamic dashboards tracking pipeline, win rates, and forecasting with custom metrics.
+                </p>
+              </CardContent>
+            </Card>
 
-              <Card className="bg-card border-border">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Zap className="w-5 h-5 text-primary" />
-                    Process Automation
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Record-triggered flows for stage transitions and notifications</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Screen flows for guided data entry and sales processes</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Email alerts and task automation based on business rules</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Error handling and retry logic for enterprise reliability</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+            <Card>
+              <CardHeader>
+                <Zap className="w-6 h-6 mb-2 text-primary" />
+                <CardTitle>Workflow Automation</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Flow-based automation reducing manual tasks and ensuring consistent processes.
+                </p>
+              </CardContent>
+            </Card>
 
-              <Card className="bg-card border-border">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <BarChart3 className="w-5 h-5 text-primary" />
-                    Reporting & Analytics
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Lightning dashboards with real-time pipeline metrics</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Custom reports for forecasting, win/loss analysis, and KPIs</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Visual representations for executive stakeholders</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Data-driven insights for sales strategy and forecasting</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
+            <Card>
+              <CardHeader>
+                <Users className="w-6 h-6 mb-2 text-primary" />
+                <CardTitle>Collaboration Tools</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Chatter, activity tracking, and communication history integrated with records.
+                </p>
+              </CardContent>
+            </Card>
 
-              <Card className="bg-card border-border">
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Database className="w-5 h-5 text-primary" />
-                    Data Management
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3">
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Complete sample data (1000+ records across objects)</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Data quality rules and validation frameworks</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Realistic business scenarios and picklist values</span>
-                    </li>
-                    <li className="flex gap-3">
-                      <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-sm">Data governance and field-level security</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </motion.div>
+            <Card>
+              <CardHeader>
+                <Shield className="w-6 h-6 mb-2 text-primary" />
+                <CardTitle>Security & Compliance</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground">
+                  Role-based access, audit trails, and data encryption for enterprise compliance.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
     </div>
