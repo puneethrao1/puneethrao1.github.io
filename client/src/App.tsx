@@ -1,5 +1,4 @@
-import { Switch, Route, Router } from "wouter";
-import { useHashLocation } from "wouter/use-hash-location";
+import { Switch, Route } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/sonner";
@@ -12,13 +11,11 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Router hook={useHashLocation}>
-          <Switch>
-            <Route path="/" component={Home} />
-            <Route path="/salesforce-demo" component={SalesforceDemo} />
-            <Route component={NotFound} />
-          </Switch>
-        </Router>
+        <Switch>
+          <Route path="/" component={Home} />
+          <Route path="/salesforce-demo" component={SalesforceDemo} />
+          <Route component={NotFound} />
+        </Switch>
         <Toaster />
       </TooltipProvider>
     </QueryClientProvider>

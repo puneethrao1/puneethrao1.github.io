@@ -20,7 +20,7 @@ const projects = [
     title: "Customer Relationship Management System",
     description: "Fully functional CRM built on Salesforce platform featuring lead tracking, opportunity management, automated workflows, and custom reporting for streamlined sales operations.",
     tags: ["Salesforce", "CRM", "Sales Automation", "Workflow Design"],
-    links: { demo: "#/salesforce-demo" }
+    links: { demo: "/salesforce-demo" }
   },
   {
     title: "Python E-commerce Analysis",
