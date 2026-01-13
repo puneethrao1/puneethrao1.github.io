@@ -1,54 +1,106 @@
 import { motion } from "framer-motion";
-import { CheckCircle2 } from "lucide-react";
-
-const skills = [
-  "Tableau", "Power BI", "SQL", "Python (Pandas, NumPy)", 
-  "Excel (Advanced)", "Statistical Analysis", "Machine Learning Concepts", 
-  "Business Intelligence", "Data Cleaning", "Storytelling"
-];
 
 export function About() {
-  return (
-    <section id="about" className="py-24 bg-background relative">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
-              Transforming Data into <span className="text-primary">Decisions</span>
-            </h2>
-            <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-              <p>
-                I am a Business Analytics & Data Visualization student passionate about transforming complex datasets into actionable strategic insights. My focus lies in bridging the gap between raw data and business decision-making through compelling storytelling and intuitive dashboards.
-              </p>
-              <p>
-                With a strong foundation in BI tools and statistical analysis, I help organizations unlock the value hidden within their data. I thrive in environments that challenge me to think critically and design solutions that drive efficiency and growth.
-              </p>
-            </div>
-          </motion.div>
+  const skillCategories = [
+    {
+      title: "Analytics & Business Intelligence",
+      skills: ["Power BI", "Tableau", "Excel (Advanced)", "Dashboard Design", "KPI Development"]
+    },
+    {
+      title: "Data & Programming",
+      skills: ["SQL", "Python", "Pandas", "NumPy", "Matplotlib", "Jupyter Notebook", "Data Cleaning", "ETL"]
+    },
+    {
+      title: "Business & Analysis",
+      skills: ["Statistical Analysis", "Predictive Modeling", "Data Storytelling", "CRM (Salesforce)", "Stakeholder Communication"]
+    }
+  ];
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="glass-card p-8 rounded-2xl"
-          >
-            <h3 className="text-xl font-semibold text-foreground mb-6">Technical Skills & Tools</h3>
-            <div className="grid grid-cols-2 gap-4">
-              {skills.map((skill, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-secondary shrink-0" />
-                  <span className="text-muted-foreground">{skill}</span>
+  return (
+    <section id="about" className="py-24 bg-muted/30">
+      <div className="container mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-7xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-3 text-center">
+            Background & Expertise
+          </h2>
+          <p className="text-center text-muted-foreground mb-12">
+            Final-year BIS student specializing in Data Analytics & Business Intelligence
+          </p>
+
+          <div className="grid lg:grid-cols-5 gap-12">
+            {/* Left: About */}
+            <div className="lg:col-span-2">
+              <div className="mb-8">
+                <p className="text-base leading-relaxed text-muted-foreground mb-6">
+                  I am a final-year Business & Information Systems student specialising in data 
+                  analytics and business intelligence. My work focuses on transforming complex 
+                  datasets into strategic insights through advanced visualisation, statistical 
+                  analysis, and predictive modelling using Power BI, Tableau, SQL, Python, and Excel.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-display font-bold text-foreground mb-4">
+                  Core Capabilities
+                </h3>
+                <div className="space-y-3">
+                  {[
+                    "Design and deploy interactive BI dashboards that drive operational and strategic decision-making",
+                    "Extract, clean, and model large-scale datasets to uncover actionable business insights",
+                    "Translate complex business challenges into structured analytical frameworks",
+                    "Conduct KPI analysis to identify performance gaps, risks, and growth opportunities",
+                    "Communicate data-driven recommendations to technical and non-technical stakeholders"
+                  ].map((capability, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="w-1.5 h-1.5 rounded-full bg-foreground/40 mt-2 flex-shrink-0" />
+                      <p className="text-sm text-muted-foreground leading-relaxed">
+                        {capability}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
-          </motion.div>
-        </div>
+
+            {/* Right: Skills */}
+            <div className="lg:col-span-3">
+              <h3 className="text-xl font-display font-bold text-foreground mb-6">
+                Technical Skills
+              </h3>
+              <div className="space-y-6">
+                {skillCategories.map((category, index) => (
+                  <motion.div
+                    key={category.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="border border-border rounded-lg p-5 bg-card hover:border-foreground/20 transition-colors"
+                  >
+                    <h4 className="text-sm font-semibold text-foreground mb-3">
+                      {category.title}
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {category.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1.5 bg-foreground/5 hover:bg-foreground/10 text-foreground text-sm rounded-md transition-colors"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

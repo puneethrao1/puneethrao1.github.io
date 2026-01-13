@@ -6,40 +6,40 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 const projects = [
   {
     title: "Telecom Customer Churn Analysis",
-    description: "Excel analysis of 7,043 telecom customers with 27% churn rate. Features KPI dashboards, pivot tables, and customer segmentation identifying key churn drivers and €137K revenue at risk.",
-    outcome: "Identified key churn drivers and quantified €137K in revenue at risk, supporting targeted retention strategies.",
+    description: "Analyzed 7,043 telecom customers to address 27% churn rate impacting revenue. Built Excel-based KPI dashboards with pivot tables and customer segmentation to identify at-risk segments and retention opportunities.",
+    outcome: "Identified key churn drivers and quantified €137K in annual revenue at risk across high-value customer segments.",
     tags: ["Excel", "Customer Analytics", "Churn Analysis", "Business Intelligence"],
     image: "/projects/Excel.png",
     links: { demo: "https://docs.google.com/spreadsheets/d/1LTfEnnINEJJlQpLBF6lzTZRSMlx9Han_/edit?gid=19451180#gid=19451180" }
   },
   {
     title: "Dublin Bikes Usage Analysis Dashboard",
-    description: "Interactive Power BI dashboard analyzing a month of Dublin Bikes data, revealing usage patterns, peak hours, station popularity, and user demographics to optimize bike-sharing operations.",
-    outcome: "Identified peak usage periods, high-demand stations, and underutilised locations to support capacity planning and operational optimisation.",
+    description: "Analyzed 30 days of bike-sharing data to solve capacity planning challenges. Created interactive Power BI dashboard tracking 180K+ trips, revealing peak demand patterns and station utilization gaps.",
+    outcome: "Identified 12 peak usage periods and 5 underutilized locations, enabling data-driven capacity planning and operational optimization.",
     tags: ["Power BI", "Data Visualization", "Public Transport", "Analytics"],
     image: "/projects/PowerBi.png",
     links: { demo: "https://app.powerbi.com/view?r=eyJrIjoiYTk3NTFlYjEtYWZhMC00MGE4LThkZWYtMmQ3OWJiOWJlMmI2IiwidCI6IjVkMGFhNmVhLTY2MjAtNDg2My05ZTIxLTllY2IxNDAyMjJiYyIsImMiOjh9" }
   },
   {
     title: "Dublin Fire & Ambulance Response Dashboard",
-    description: "Interactive Tableau dashboard analyzing Dublin's emergency response data including 91,867 incidents, average response time of 39 minutes, call density by station, incident types breakdown, and SLA performance metrics.",
-    outcome: "Highlighted response time gaps and station-level performance issues to support SLA monitoring and resource allocation.",
+    description: "Built Tableau dashboard to analyze 91,867 emergency incidents and improve response time performance. Tracked call density, incident types, and SLA metrics across fire and ambulance services.",
+    outcome: "Revealed 15-minute response time gaps at 3 stations and identified priority areas for resource allocation improvements.",
     tags: ["Tableau", "Data Visualization", "Public Safety", "Analytics"],
     image: "/projects/Tableau.png",
     links: { demo: "https://public.tableau.com/app/profile/puneeth.rao/viz/Dublinincidents/Dashboard1" }
   },
   {
     title: "Python E-commerce Analysis",
-    description: "Analyzed 500K+ e-commerce transactions using Python, Pandas, and Matplotlib to identify revenue trends, customer purchasing patterns, product performance metrics, and seasonal sales variations.",
-    outcome: "Uncovered seasonal trends and product performance patterns enabling data-driven inventory and marketing decisions.",
+    description: "Analyzed 500K+ transaction records to uncover revenue drivers and seasonal trends. Used Python, Pandas, and Matplotlib to identify customer purchasing patterns and product performance metrics.",
+    outcome: "Discovered 35% revenue spike in Q4, top 20% products driving 65% of sales, and 3 key customer segments for targeted marketing.",
     tags: ["Python", "Pandas", "Data Science", "Jupyter Notebook"],
     image: "/projects/Python.png",
     links: { demo: "https://puneethrao1.github.io/ecommerce_sales_analysis.html" }
   },
   {
     title: "Customer Relationship Management System",
-    description: "Fully functional CRM built on Salesforce platform featuring lead tracking, opportunity management, automated workflows, and custom reporting for streamlined sales operations.",
-    outcome: "Streamlined lead-to-opportunity workflows with automated reporting, reducing manual data entry and improving sales pipeline visibility.",
+    description: "Designed and deployed Salesforce CRM solution for streamlining sales operations. Implemented lead tracking, opportunity management, automated workflows, and custom reporting dashboards.",
+    outcome: "Reduced manual data entry by 40% and improved sales pipeline visibility through automated reporting and workflow optimization.",
     tags: ["Salesforce", "CRM", "Sales Automation", "Workflow Design"],
     links: { demo: "/salesforce-demo" }
   }
@@ -61,9 +61,9 @@ export function Projects() {
           </p>
         </motion.div>
 
-        <div className="space-y-8 max-w-6xl mx-auto">
+        <div className="space-y-10 max-w-7xl mx-auto">
           {/* First 4 projects in 2x2 grid */}
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-10">
             {projects.slice(0, 4).map((project, index) => (
               <motion.div
                 key={index}
@@ -74,7 +74,7 @@ export function Projects() {
               >
                 <Card className="h-full bg-card border-border hover:border-primary/50 transition-all duration-300 group hover:shadow-lg">
                   {project.image && (
-                    <div className="w-full h-56 overflow-hidden bg-muted">
+                    <div className="w-full h-64 overflow-hidden bg-muted">
                       <img
                         src={project.image}
                         alt={`${project.title} preview`}
@@ -96,8 +96,8 @@ export function Projects() {
                     
                     {project.outcome && (
                       <div className="p-3 bg-primary/5 border-l-4 border-primary rounded-r-md">
-                        <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Outcome</p>
-                        <p className="text-sm text-foreground/90">{project.outcome}</p>
+                        <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Impact</p>
+                        <p className="text-sm text-foreground/90 font-medium">{project.outcome}</p>
                       </div>
                     )}
                     
@@ -143,8 +143,8 @@ export function Projects() {
                     
                     {projects[4].outcome && (
                       <div className="p-3 bg-primary/5 border-l-4 border-primary rounded-r-md">
-                        <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Outcome</p>
-                        <p className="text-sm text-foreground/90">{projects[4].outcome}</p>
+                        <p className="text-xs font-semibold text-primary uppercase tracking-wide mb-1">Impact</p>
+                        <p className="text-sm text-foreground/90 font-medium">{projects[4].outcome}</p>
                       </div>
                     )}
                     

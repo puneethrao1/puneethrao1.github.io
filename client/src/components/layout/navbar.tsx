@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X, FileText } from "lucide-react";
+import { Menu, X, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
@@ -62,10 +62,10 @@ export function Navbar() {
           <Button 
             variant="outline" 
             className="ml-4 border-primary/50 text-primary hover:bg-primary/10 hover:text-primary"
-            onClick={() => window.open("/resume.pdf", "_blank")} // Placeholder
+            onClick={() => window.location.href = "mailto:inbox.puneethrao@gmail.com"}
           >
-            <FileText className="w-4 h-4 mr-2" />
-            Resume
+            <Mail className="w-4 h-4 mr-2" />
+            Email Me
           </Button>
         </div>
 
@@ -100,9 +100,10 @@ export function Navbar() {
               ))}
               <Button 
                 className="w-full mt-4 bg-primary hover:bg-primary/90 text-white"
-                onClick={() => window.open("/resume.pdf", "_blank")}
+                onClick={() => window.location.href = "mailto:inbox.puneethrao@gmail.com"}
               >
-                Download Resume
+                <Mail className="w-4 h-4 mr-2" />
+                Email Me
               </Button>
             </div>
           </motion.div>
