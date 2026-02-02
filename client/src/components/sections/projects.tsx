@@ -34,7 +34,8 @@ const projects = [
     outcome: "Discovered 35% revenue spike in Q4, top 20% products driving 65% of sales, and 3 key customer segments for targeted marketing.",
     tags: ["Python", "Pandas", "Data Science", "Jupyter Notebook"],
     image: "/projects/Python.png",
-    links: { demo: "https://puneethrao1.github.io/ecommerce_sales_analysis.html" }
+    links: { demo: "/assets/ecommerce_sales_analysis.pdf" }
+
   },
   {
     title: "Customer Relationship Management System",
