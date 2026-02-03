@@ -1,9 +1,12 @@
 import express, { type Request, Response, NextFunction } from "express";
+import path from "path";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 
 const app = express();
+app.use("/assets", express.static(path.join(process.cwd(), "public/assets")));
+
 const httpServer = createServer(app);
 
 declare module "http" {
@@ -85,8 +88,8 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = parseInt(process.env.PORT || "3001", 10);
-  
+
   httpServer.listen(port, () => {
-  log(`serving on port ${port}`);
-});
+    log(`serving on port ${port}`);
+  });
 })();
