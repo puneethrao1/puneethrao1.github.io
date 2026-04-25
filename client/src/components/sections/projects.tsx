@@ -13,12 +13,12 @@ const projects = [
     links: { demo: "https://docs.google.com/spreadsheets/d/1LTfEnnINEJJlQpLBF6lzTZRSMlx9Han_/edit?gid=19451180#gid=19451180" }
   },
   {
-    title: "Dublin Bikes Usage Analysis Dashboard",
-    description: "Analyzed 30 days of bike-sharing data to solve capacity planning challenges. Created interactive Power BI dashboard tracking 180K+ trips, revealing peak demand patterns and station utilization gaps.",
-    outcome: "Identified 12 peak usage periods and 5 underutilized locations, enabling data-driven capacity planning and operational optimization.",
-    tags: ["Power BI", "Data Visualization", "Public Transport", "Analytics"],
+    title: "Bengaluru Metro Operations Dashboard",
+    description: "Surfaced peak-hour demand patterns, station throughput metrics, and capacity utilisation gaps by building a PostgreSQL data warehouse with SQL transformations feeding a live Power BI dashboard, supporting data-driven operational planning decisions.",
+    outcome: "Delivered actionable insights on peak-hour demand and underutilised stations to support capacity planning and operational efficiency improvements.",
+    tags: ["Power BI", "PostgreSQL", "Python", "SQL"],
     image: "/projects/PowerBi.png",
-    links: { demo: "https://app.powerbi.com/view?r=eyJrIjoiYTk3NTFlYjEtYWZhMC00MGE4LThkZWYtMmQ3OWJiOWJlMmI2IiwidCI6IjVkMGFhNmVhLTY2MjAtNDg2My05ZTIxLTllY2IxNDAyMjJiYyIsImMiOjh9" }
+    links: { demo: "https://github.com/puneethrao1" }
   },
   {
     title: "Dublin Fire & Ambulance Response Dashboard",
