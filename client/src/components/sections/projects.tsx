@@ -14,11 +14,11 @@ const projects = [
   },
   {
     title: "Bengaluru Metro Operations Dashboard",
-    description: "Surfaced peak-hour demand patterns, station throughput metrics, and capacity utilisation gaps by building a PostgreSQL data warehouse with SQL transformations feeding a live Power BI dashboard, supporting data-driven operational planning decisions.",
+    description:"Full-stack analytics project — built a PostgreSQL data warehouse with Python ETL pipelines and SQL transformations, feeding a live Power BI dashboard to surface peak-hour demand patterns, station throughput metrics, and capacity utilisation gaps across the Bengaluru Metro network.",
     outcome: "Delivered actionable insights on peak-hour demand and underutilised stations to support capacity planning and operational efficiency improvements.",
     tags: ["Power BI", "PostgreSQL", "Python", "SQL"],
     image: "/projects/PowerBi.png",
-    links: { demo: "https://github.com/puneethrao1" }
+    links: { demo: "https://app.powerbi.com/groups/me/reports/7aa8677f-c53e-4252-9422-d12dc60738d9/2ece36fba7d976b8c82b?experience=power-bi" }
   },
   {
     title: "Dublin Fire & Ambulance Response Dashboard",
